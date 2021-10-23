@@ -5,7 +5,6 @@ import HomeWork1.Employee;
 import java.util.Date;
 
 public class Developer extends Employee {
-    private String name;
     private int experience; //лет в программировании
     private String programLanguage;
 

@@ -3,7 +3,6 @@ package HomeWork1;
 import HomeWork1.Employee;
 
 public class Trainee extends Employee {
-    private String name;
     private String university;
     private boolean isFinished; // Закончил университет ли университет
 

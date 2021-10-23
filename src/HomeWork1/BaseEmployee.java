@@ -3,7 +3,6 @@ package HomeWork1;
 import HomeWork1.Employee;
 
 public class BaseEmployee extends Employee {
-    private String name;
     private int age;
     private boolean sex; //true = male, false = female;
 

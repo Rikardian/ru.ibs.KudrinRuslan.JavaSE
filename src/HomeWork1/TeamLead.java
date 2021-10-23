@@ -3,7 +3,6 @@ package HomeWork1;
 import HomeWork1.Employee;
 
 public class TeamLead extends Employee implements Manager {
-    private String name;
     private int salary;
     private boolean isBusy;
 
