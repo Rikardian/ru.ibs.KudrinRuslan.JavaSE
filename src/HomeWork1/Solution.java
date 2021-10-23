@@ -107,8 +107,7 @@ public class Solution {
                     else if (key instanceof TeamLead)
                         return true;
                     else return false;
-                }).distinct()
-                .collect(Collectors.groupingBy(Employee::getProfession));
+                }).collect(Collectors.groupingBy(Employee::getProfession));
 
         for (String key : someResult.keySet()){
             System.out.println(key + " " + someResult.get(key));
