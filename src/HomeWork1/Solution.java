@@ -93,13 +93,12 @@ public class Solution {
         List<Employee> sortedEmployee = employeesSet
                 .stream()
                 .filter(type -> type instanceof Trainee)
-                .collect(Collectors.toCollection(ArrayList::new)); //отфильтровал по типу класса
+                .collect(Collectors.toList()); //отфильтровал по типу класса
 
-        List<String> names = employeesSet
+        employeesSet
                 .stream()
-                .map(value -> value.getName())
-                .collect(Collectors.toCollection(ArrayList::new)); //преобразовал в список имен
+                .map(Employee::getName)
+                .forEach(System.out::println); //преобразовал в список имен и вывел в консоль
 
-        names.forEach(System.out::println); //вывел в консоль
     }
 }
