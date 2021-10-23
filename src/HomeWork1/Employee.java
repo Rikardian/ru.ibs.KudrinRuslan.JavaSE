@@ -4,6 +4,7 @@ public abstract class Employee {
     private final String salaryDate = "23";
     private int salary = 55000;
     protected String name;
+    protected String profession;
 
     public abstract void work();
 
@@ -17,5 +18,9 @@ public abstract class Employee {
 
     public String getName() {
         return name;
+    }
+
+    public String getProfession() {
+        return profession;
     }
 }

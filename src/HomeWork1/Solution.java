@@ -94,11 +94,25 @@ public class Solution {
                 .stream()
                 .filter(type -> type instanceof Trainee)
                 .collect(Collectors.toList()); //отфильтровал по типу класса
-
+/*
         employeesSet
                 .stream()
                 .map(Employee::getName)
                 .forEach(System.out::println); //преобразовал в список имен и вывел в консоль
+*/
+        Map<String, List<Employee>> someResult = employeesList.stream()
+                .filter(key -> {
+                    if (key instanceof Developer)
+                        return true;
+                    else if (key instanceof TeamLead)
+                        return true;
+                    else return false;
+                }).distinct()
+                .collect(Collectors.groupingBy(Employee::getProfession));
+
+        for (String key : someResult.keySet()){
+            System.out.println(key + " " + someResult.get(key));
+        }
 
     }
 }

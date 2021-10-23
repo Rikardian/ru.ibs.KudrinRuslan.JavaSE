@@ -10,6 +10,7 @@ public class TeamLead extends Employee implements Manager {
         this.name = name;
         this.salary = salary;
         this.isBusy = isBusy;
+        this.profession = "Тимлид";
     }
 
     public String getName() {

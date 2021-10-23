@@ -10,6 +10,7 @@ public class BaseEmployee extends Employee {
         this.name = name;
         this.age = age;
         this.sex = sex;
+        this.profession = "Базовый работник";
     }
 
     public String getName() {

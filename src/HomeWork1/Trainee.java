@@ -8,6 +8,7 @@ public class Trainee extends Employee {
         this.name = name;
         this.university = university;
         this.isFinished = isFinished;
+        this.profession = "Стажер";
     }
 
     public String getName() {

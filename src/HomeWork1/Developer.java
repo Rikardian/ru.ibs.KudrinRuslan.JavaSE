@@ -12,6 +12,7 @@ public class Developer extends Employee {
         this.name = name;
         this.experience = experience;
         this.programLanguage = programLanguage;
+        this.profession = "Разработчик";
     }
 
     public String getName() {
