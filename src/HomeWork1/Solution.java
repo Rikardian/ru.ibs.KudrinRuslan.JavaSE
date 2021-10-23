@@ -4,19 +4,42 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Solution {
-    public static void main (String [] args){
+    public static void main(String[] args) {
         Set<Employee> employeesSet = new HashSet<>();
-        employeesSet.add(new Trainee("Кудрин Руслан", "Oxford", false));
-        employeesSet.add(new BaseEmployee("Алла Борисовна", 72, false));
-        employeesSet.add(new Developer("Розенок Константин", 8, "Java"));
-        employeesSet.add(new TeamLead("Халмухамедов Валентин", 1000000, true));
-        employeesSet.add(new Trainee("Вин Дизель", "Машиностроительный", true));
-        employeesSet.add(new BaseEmployee("Том Круз", 15, true));
-        employeesSet.add(new Developer("Стив Возняк", 10000, "All"));
-        employeesSet.add(new TeamLead("Стив Джобс", 90000000, true));
+        employeesSet.add(new Trainee(
+                "Кудрин Руслан",
+                "Oxford",
+                false));
+        employeesSet.add(new BaseEmployee(
+                "Алла Борисовна",
+                72, false));
+        employeesSet.add(new Developer(
+                "Розенок Константин",
+                8,
+                "Java"));
+        employeesSet.add(new TeamLead(
+                "Халмухамедов Валентин",
+                1000000,
+                true));
+        employeesSet.add(new Trainee(
+                "Вин Дизель",
+                "Машиностроительный",
+                true));
+        employeesSet.add(new BaseEmployee(
+                "Том Круз",
+                15,
+                true));
+        employeesSet.add(new Developer(
+                "Стив Возняк",
+                10000,
+                "All"));
+        employeesSet.add(new TeamLead(
+                "Стив Джобс",
+                90000000,
+                true));
 
         List<Employee> employeesList = new ArrayList<>();
-        for (Employee employee : employeesSet){
+        for (Employee employee : employeesSet) {
             employeesList.add(employee);
         }
 
@@ -31,15 +54,14 @@ public class Solution {
                 System.out.println("Анонимный класс делает работу");
             }
 
-            public boolean isWorking (){
+            public boolean isWorking() {
                 return true;
             }
 
-            public void getSalary(){
-                if (getSalaryDate().equals("23")){
+            public void getSalary() {
+                if (getSalaryDate().equals("23")) {
                     System.out.println("Анонимный класс получил зарплату");
-                }
-                else System.out.println("День зарплаты будет позднее");
+                } else System.out.println("День зарплаты будет позднее");
             }
 
             public String getName() {
@@ -64,12 +86,12 @@ public class Solution {
             }
         };
 
-        List <Employee> sortedEmployee = employeesSet
+        List<Employee> sortedEmployee = employeesSet
                 .stream()
                 .filter(type -> type instanceof Trainee)
                 .collect(Collectors.toCollection(ArrayList::new)); //отфильтровал по типу класса
 
-        List <String> names = employeesSet
+        List<String> names = employeesSet
                 .stream()
                 .map(value -> value.getName())
                 .collect(Collectors.toCollection(ArrayList::new)); //преобразовал в список имен
