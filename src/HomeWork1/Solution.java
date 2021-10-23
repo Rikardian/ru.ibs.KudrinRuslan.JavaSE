@@ -10,29 +10,36 @@ public class Solution {
                 "Кудрин Руслан",
                 "Oxford",
                 false));
+
         employeesSet.add(new BaseEmployee(
                 "Алла Борисовна",
                 72, false));
+
         employeesSet.add(new Developer(
                 "Розенок Константин",
                 8,
                 "Java"));
+
         employeesSet.add(new TeamLead(
                 "Халмухамедов Валентин",
                 1000000,
                 true));
+
         employeesSet.add(new Trainee(
                 "Вин Дизель",
                 "Машиностроительный",
                 true));
+
         employeesSet.add(new BaseEmployee(
                 "Том Круз",
                 15,
                 true));
+
         employeesSet.add(new Developer(
                 "Стив Возняк",
                 10000,
                 "All"));
+
         employeesSet.add(new TeamLead(
                 "Стив Джобс",
                 90000000,
