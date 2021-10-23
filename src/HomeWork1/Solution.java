@@ -45,10 +45,7 @@ public class Solution {
                 90000000,
                 true));
 
-        List<Employee> employeesList = new ArrayList<>();
-        for (Employee employee : employeesSet) {
-            employeesList.add(employee);
-        }
+        List<Employee> employeesList = new ArrayList<>(employeesSet);
 
         Employee anonymousEmployee = new Employee() {
             String name = "Савелий";
@@ -103,8 +100,6 @@ public class Solution {
                 .map(value -> value.getName())
                 .collect(Collectors.toCollection(ArrayList::new)); //преобразовал в список имен
 
-        names
-                .stream()
-                .forEach(System.out::println); //вывел в консоль
+        names.forEach(System.out::println); //вывел в консоль
     }
 }
